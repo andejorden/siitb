@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercitiul 03</title>
+    <link rel="stylesheet" href="css/formular.css">
+    <script>
+        
+        function verify(formular, event){
+            event.preventDefault();
+            
+            var input01 = document.querySelector("[name='text01']");
+            var input02 = document.querySelector("[name='text02']");
+            var rezultat = document.querySelector("[name='rezultat']");
+            if(input01.value === "" || input02.value === ""){
+                return false;
+            }else if(input01.value > input02.value){
+                rezultat.value = input01.value;
+            }else if(input02.value > input01.value){
+                rezultat.value = input02.value;
+            }else if(input01.value === input02.value){
+                rezultat.value = input01.value + " = " + input02.value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoala Informala de IT - Bucuresti</h1>
+        <h2>Tema DOM - Validare Formular</h2>
+        <h3>Exercitiul 03</h3>
+        <form onsubmit="verify(this, event);">
+            <fieldset>
+                <legend>
+                    03. Pastrati doar 3 inputuri si afisati in al 3-lea input valoarea inputului mai mare dintre primul si al doilea
+                </legend>
+                <label>
+                    <input type="number" name="text01" placeholder="Valoarea 01" max="9" min="0">
+                </label>
+                <label>
+                        <input type="number" name="text02" placeholder="Valoarea 02" max="9" min="0">
+                </label>
+                <label>
+                        <input type="text" name="rezultat" placeholder="Rezultat">
+                </label>
+                <input type="submit" value="Verifica!">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

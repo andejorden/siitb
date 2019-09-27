@@ -1,0 +1,20 @@
+th, td{
+    padding: 10px;
+}
+
+table, form{
+    margin-bottom: 20px;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.hidden{
+    display: none;
+}

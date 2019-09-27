@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercitiul 06</title>
+    <link rel="stylesheet" href="css/formular.css">
+    <script>
+
+        function verify(input, event){
+            var result = document.querySelector("#result").innerHTML = input.value.length;
+            if(result > 9){
+                document.querySelector("#result").classList.add("red");
+            }else{
+                document.querySelector("#result").classList.remove("red");
+            }
+        }
+
+        function stop(input, event){
+            if(input.value.length > 9){
+                event.preventDefault(stop);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoala Informala de IT - Bucuresti</h1>
+        <h2>Tema DOM - Validare Formular</h2>
+        <h3>Exercitiul 06</h3>
+        <form>
+            <fieldset>
+                <legend>
+                    06. Plecand de la ex 5, limitati numarul de caractere la 10. In momentul in care am ajuns la 10, inrositi counterul si folosind event.preventDefault() pe evenimentul onkeypress opriti utilizatorul sa mai introduca caractere in plus
+                </legend>
+                <label>
+                    <input type="text" name="text01" placeholder="Valoarea 01" onkeyup="verify(this, event)" onkeypress="stop(this, event)">
+                </label>
+            </fieldset>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+</body>
+</html>

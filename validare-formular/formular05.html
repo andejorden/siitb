@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercitiul 05</title>
+    <link rel="stylesheet" href="css/formular.css">
+    <script>
+
+        function verify(input, event){
+            event.preventDefault();
+            var result = document.querySelector("#result").innerHTML = input.value.length;
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoala Informala de IT - Bucuresti</h1>
+        <h2>Tema DOM - Validare Formular</h2>
+        <h3>Exercitiul 05</h3>
+        <form>
+            <fieldset>
+                <legend>
+                    05. Pastrati doar 1 input si afisati intr-un span/div in coltul dreapta jos, lungimea sirului de caractere tastat.
+                </legend>
+                <label>
+                    <input type="text" name="text01" placeholder="Valoarea 01" onkeyup="verify(this, event)">
+                </label>
+            </fieldset>
+        </form>
+        <p id="result"></p>
+    </div>
+</body>
+</html>

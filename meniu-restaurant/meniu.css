@@ -1,0 +1,40 @@
+th, td{
+    padding: 10px;
+}
+
+table, form{
+    margin-bottom: 20px;
+}
+
+table{
+    table-layout: auto;
+    width: 100%;
+}
+
+table, th, td{
+    border: 1px solid #ebebeb;
+    border-collapse: collapse;
+}
+
+table td.image{
+    width: 250px;
+}
+
+tbody td img{
+    width: 100%;
+}
+
+article img{
+    width: 360px;
+}
+
+article iframe{
+    border: none;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercitiul 02</title>
+    <link rel="stylesheet" href="css/formular.css">
+    <script>
+        
+        function verify(formular, event){
+            var input01 = document.querySelector("[name='text01']");
+            var input02 = document.querySelector("[name='text02']");
+            var nume = input01.value;
+            var prenume = input02.value;
+            console.log(nume);
+            console.log(prenume);
+            if(nume > prenume){
+                input01.classList.add("green");
+                input02.classList.remove("green");
+            }else if(nume < prenume){
+                input01.classList.remove("green");
+                input02.classList.add("green");
+            }else if(nume === prenume && nume + prenume != 0){
+                input01.classList.add("green");
+                input02.classList.add("green");
+            }else{
+                input01.classList.remove("green");
+                input02.classList.remove("green");
+            }
+            event.preventDefault();
+            formular.reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoala Informala de IT - Bucuresti</h1>
+        <h2>Tema DOM - Validare Formular</h2>
+        <h3>Exercitiul 02</h3>
+        <form onsubmit="verify(this, event);">
+            <fieldset>
+                <legend>
+                    02. Pastrati doar 2 inputuri si colorati inputul care are valoarea mai mare. Daca sunt egale, colorati-le pe ambele
+                </legend>
+                <label>
+                    <input type="text" name="text01" placeholder="Valoare 01">
+                </label>
+                <label>
+                        <input type="text" name="text02" placeholder="Valoarea 02">
+                </label>
+                <input type="submit" value="Verifica!">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

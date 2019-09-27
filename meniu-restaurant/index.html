@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meniu Restaurant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="meniu.css">
+    <script src="meniu.js"></script>
+</head>
+<body onload="display();">
+    <div class="container">
+        <article>
+            <header class="jumbotron">
+                <h1>Scoala Informala de IT - Bucuresti</h1>
+                <h2>Tema DOM - Meniu Restaurant</h2>
+                <nav>
+                    <button type="button" class="btn btn-primary active" onclick="location.href='index.html'">Meniu</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='contact.html'">Contact</button>
+                </nav>
+            </header>
+            <form onsubmit="searchForIngredients(this, event)">
+                <fieldset>
+                    <legend>
+                        Cald si bun
+                    </legend>
+                    <input type="text" name="search" class="form-control-sm">
+                    <input type="submit" value="Cauta!" class="btn btn-secondary">
+                </fieldset>
+            </form>
+            <table>
+                <tbody>
+                </tbody>
+            </table>
+        </article>
+        <footer class="jumbotron text-center">
+            <p>Copyright &copy; - <strong>AI - All rights reserved</strong></p>
+        </footer>
+    </div>
+</body>
+</html>

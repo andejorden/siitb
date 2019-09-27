@@ -1,0 +1,89 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font: normal 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(48, 53, 53);
+    background-color: dimgray;
+}
+
+body h1, h2, h3{
+    color: aliceblue;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 2em;
+    width: 50%;
+}
+
+form fieldset, form fieldset legend{
+    border: 2px solid rgb(202, 214, 214);
+    border-radius: 0.6em;
+    padding: 1em;
+}
+
+form fieldset legend{
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+form fieldset{
+    background-color: rgb(227, 238, 238);
+}
+
+input, select, span{
+    padding: 5px;
+}
+
+form label{
+    display: flex;
+    padding: 5px;
+}
+
+form label span{
+    flex: 0.5;
+}
+
+form label input, form label select{
+    flex: 3;
+    font-size: 14px;
+    color: rgb(48, 53, 53);
+}
+
+form label.inline{
+    display: inline-block;
+    clear: both;
+}
+
+form fieldset input[type="submit"]{
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 0.7em 1.5em;
+    background-color: cadetblue;
+    color: aliceblue;
+    border: 2px solid rgb(202, 214, 214);
+    border-radius: 0.6em;
+}
+
+form fieldset input[type="submit"]:hover{
+    background-color: rgb(139, 184, 187);
+}
+
+.hidden{
+    display: none;
+}
+
+.green{
+    background-color: rgb(0, 255, 0);
+}
+
+.red{
+    background-color: rgb(255, 0, 0);
+}
+
+#result{
+    color: aliceblue;
+}

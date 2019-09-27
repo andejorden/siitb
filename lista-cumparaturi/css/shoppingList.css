@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    font: normal 20px/174%  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3f3d3a;
+    background-color: #ffeaa6;
+}
+
+h1{
+    color: #ff5e00;
+}
+
+h2{
+    color: #ca7900;
+}
+
+.container{
+    width: 74%;
+    margin: 0 auto;
+}
+
+form fieldset, table, th, td{
+    border: 1px solid #3f3d3a42;
+}
+
+form, table{
+    margin-bottom: 20px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+.alarm{
+    color: #ff5e00;
+}
+
+.checked{
+    text-decoration: line-through;
+}

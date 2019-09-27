@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercitiul 07</title>
+    <link rel="stylesheet" href="css/formular.css">
+    <script>
+
+        function verify(str){
+            if(str.length > 9){
+                document.querySelector("#display").classList.add("red");
+            }else{
+                document.querySelector("#display").classList.remove("red");
+            }
+            document.querySelector("#display").innerHTML = str.length;
+        }
+
+        function stop(input, event){
+            var charCode = event.which ? event.which : event.keyCode;
+            if(input.length > 9){
+                if (charCode > 31 && (charCode < 48 || charCode > 57)){
+                event.preventDefault(stop);
+                }else{
+                    return true;
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoala Informala deIT - Bucuresti</h1>
+        <h2>Tema DOM - Validare Formular</h2>
+        <h3>Exercitiul 07</h3>
+        <form>
+            <fieldset>
+                <legend>
+                    07. Pastrati doar 1 input si folosind event.preventDefault pe evenimentul onkeypress, opriti utilizatorul sa mai introduca orice altceva decat numere. (tip: puteti sa gasiti caracterul tastat in event.key)
+                </legend>
+                <label>
+                    <input type="text" name="text01" placeholder="Valoarea 01" onkeyup = "verify(this.value)" onkeypress="stop(this.value, event)">
+                </label>
+            </fieldset>
+        </form>
+        <h2 id="display"></h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularul</title>
+    <link rel="stylesheet" type="text/css" href="css/formular.css">
+    <script src="js/formular.js"></script>
+</head>
+<body>
+    <!-- Construiti in HTML si CSS un formular care sa contina 3 Input type text, 2 Selecturi 3 Checkboxuri, 3 Radio Buttons si un submit. Folositi cele invatate astazi si in orele precedente (atributul name, placeholder, class, id, etc, labeluri, color, backgroundColor, border, etc). -->
+
+    <div class="container">
+        <h1>Scoala Informala de IT, Bucuresti</h1>
+        <h2>DOM - Formularul</h2>
+        <form onsubmit="formAction(this, event)">
+            <fieldset>
+                <legend>Construiti in <strong>HTML</strong> si <strong>CSS</strong> un formular care sa contina 3 Input type text, 2 Selecturi 3 Checkboxuri, 3 Radio Buttons si un submit. Folositi cele invatate astazi si in orele precedente (atributul name, placeholder, class, id, etc, labeluri, color, backgroundColor, border, etc).</legend>
+
+                <h3>Completeaza datele personale</h3>
+                <label>
+                    <span>Nume:</span>
+                    <input type="text" name="inputTextOne" placeholder="Numele">
+                </label>
+                
+                <label>
+                    <span>Prenume:</span>
+                    <input type="text" name="inputTextTwo" placeholder="Prenumele">
+                </label>
+
+                <label>
+                    <span>Ocupatia:</span>
+                    <input type="text" name="inputTextThree" placeholder="Ocupatia">
+                </label>
+
+                <h3>Alege un autovehicul de fabricatie:</h3>
+                <label class="inline"><input type="checkbox" name="japan" onchange="carsMark(this, event)">Japoneza</label>
+                <label class="inline"><input type="checkbox" name="german" onchange="carsMark(this, event)"> Germana</label>
+                <label class="inline"><input type="checkbox" name="american" onchange="carsMark(this, event)"> Americana</label>
+
+                <h3 class="hidden">Alege marca dorita</h3>
+
+                <label class="japan hidden">
+                    <span>Japonia:</span>
+                    <select name="selectOne">
+                        <option value="" disabled selected>Alege marca:</option>
+                        <option value="Nisan">Nisan</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                    </select>
+                </label>
+                
+                <label class="german hidden">
+                    <span>Germania:</span>
+                    <select name="selectTwo">
+                        <option value="" disabled selected>Alege marca:</option>
+                        <option value="Opel">Opel</option>
+                        <option value="Wolswagon">Volkswagen</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes">Mercedes</option>
+                    </select>
+                </label>
+                
+                <label class="american hidden">
+                    <span>USA:</span>
+                    <select name="selectThree">
+                        <option value="" disabled selected>Alege marca:</option>
+                        <option value="Ford">Ford   </option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="GMC">GMC</option>
+                        <option value="Cadillac">Cadillac</option>
+                    </select>
+                </label>
+                
+                <h3>Alege tipul de combustibil</h3>
+                <label class="inline"><input type="radio" name="gas" onclick="uncheckDiesel()"> Benzina</label>
+                <label class="inline"><input type="radio" name="diesel" onclick="uncheckGas()"> Motorina</label>
+                <br>
+                <input type="submit" value="Trimite!">
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>

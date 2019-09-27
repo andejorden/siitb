@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercitiul 01</title>
+    <link rel="stylesheet" href="css/formular.css">
+    <script>
+        
+        function verify(formular, event){
+            var input01 = document.querySelector("[name='text01']");
+            var input02 = document.querySelector("[name='text02']");
+            var nume = input01.value;
+            var prenume = input02.value;
+            console.log(nume);
+            console.log(prenume);
+            if(nume === prenume && nume + prenume != 0){
+                input01.classList.add("green");
+                input02.classList.add("green");
+            }else{
+                input01.classList.remove("green");
+                input02.classList.remove("green");
+            }
+            event.preventDefault();
+            formular.reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoala Informala de IT - Bucuresti</h1>
+        <h2>Tema DOM - Validare Formular</h2>
+        <h3>Exercitiul 01</h3>
+        <form onsubmit="verify(this, event);">
+            <fieldset>
+                <legend>
+                    01. Pastrati doar 2 inputuri si colorati ambele inputuri verzi daca valoarea din casuta 1 si din casuta 2 sunt egale
+                </legend>
+                <label>
+                    <input type="text" name="text01" placeholder="Nume">
+                </label>
+                <label>
+                        <input type="text" name="text02" placeholder="Prenume">
+                </label>
+                <input type="submit" value="Verifica!">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

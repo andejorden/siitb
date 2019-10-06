@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Scoala Informala de IT - Bucuresti</title>
 </head>
+<script>
+    const testFolder = './tests/';
+    const fs = require('fs');
+
+    fs.readdirSync(testFolder).forEach(file => {
+    console.log(file);
+    });
+</script>
 <body>
     <h1>Scoala Informala de IT - Bucuresti</h1>
     <h2>Teme</h2>

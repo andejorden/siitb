@@ -11,8 +11,11 @@ var myloc = window.location.href;
 var locarray = myloc.split("/");
 delete locarray[(locarray.length-1)];
 var arraytext = locarray.join("/");
+    function some(){
+        console.log(arraytext);
+    }
 </script>
-<body>
+<body onload="some()">
     <h1>Scoala Informala de IT - Bucuresti</h1>
     <h2>Teme</h2>
 </body>

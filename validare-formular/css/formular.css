@@ -13,10 +13,6 @@ h1, h2, h3{
     color: aliceblue;
 }
 
-form h3{
-    color: rgb(202, 214, 214);
-}
-
 .container{
     margin: 0 auto;
     padding: 2em;
@@ -90,4 +86,8 @@ form fieldset input[type="submit"]:hover{
 
 #result{
     color: aliceblue;
+}
+
+form fieldset h3{
+    color: rgb(202, 214, 214);
 }

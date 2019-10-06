@@ -9,12 +9,13 @@
 <script>
     const testFolder = './tests/';
     const fs = require('fs');
-
+function some(){
     fs.readdirSync(testFolder).forEach(file => {
     console.log(file);
     });
+}
 </script>
-<body>
+<body onload="some()">
     <h1>Scoala Informala de IT - Bucuresti</h1>
     <h2>Teme</h2>
 </body>

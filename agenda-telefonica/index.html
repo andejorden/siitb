@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agenda Telefonica</title>
+    <link rel="stylesheet" type="text/css" href="css/agenda.css">
+    <script src="js/agenda.js"></script>
+</head>
+<body>
+    <div class="wrapp">
+        <h1>Scoala Informala de IT - Bucuresti</h1>
+        <h2>Tema DOM - Agenda Telefonica</h2>
+        <p id="demo"></p>
+        <form id ="formular" onsubmit="addData(this, event);">
+            <fieldset>
+                <legend><strong>Completeaza cu Numele si Numarul de Telefon Mobil</strong></legend>
+                <label>Nume: <input type="text" name="nume" required></label>
+                <label>Telefon: <input type="tel" name="telefon" pattern="^[0-9]{4}[0-9]{3}[0-9]{3}$" required></label>
+                <input type="submit" name="submit" value="Adauga!">
+            </fieldset>
+        </form>
+        <table id="display-table" class="hidden">
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th colspan="4">Telefon</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

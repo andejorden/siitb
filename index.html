@@ -7,11 +7,14 @@
     <title>Scoala Informala de IT - Bucuresti</title>
 </head>
 <script>
-    const testFolder = './tests/';
-    const fs = require('fs');
+const testFolder = './tests/';
+const fs = require('fs');
+
 function some(){
-    fs.readdirSync(testFolder).forEach(file => {
-    console.log(file);
+    fs.readdir(testFolder, (err, files) => {
+    files.forEach(file => {
+        console.log(file);
+    });
     });
 }
 </script>

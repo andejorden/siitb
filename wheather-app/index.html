@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="weather.css">
+    <script src="weather.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Scoala Informala de IT - Bucuresti</h1>
+        <h2>Weather App</h2>
+        <form onsubmit="getData(this, event)">
+            <label>Afiseaza starea vremii in: <input type="text" name="cityName" placeholder="Orasul"></label>
+            <input type="submit" value="OK!">
+        </form>
+        <div id="vremea"></div>
+        <div id="googleMap"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnxnrevl5B5njMnUcz762TkOWWFOG7KiY&callback=initMap" async defer></script>
+        <div id="prognoza" class="row"></div>
+    </div>
+    <footer class="jumbotron text-center">&copy; AI - All Rights Reserved</footer>
+</body>
+</html>
